@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ASasitharan_NETD3200_Lab1
 {
-   public class Program
+   public class Project
     {
         //First private data member
         private string projectName;
@@ -15,8 +15,13 @@ namespace ASasitharan_NETD3200_Lab1
         private string projectStatus;
         //Complete the rest (there are four more mentioned in the description).
         //constructor, you need to complete it this is a no parameter constructor shown below.
-        public Program(string projectName, double budget, double amountSpent, double hoursRemaining, string projectStatus)
+        public Project(string projectName, double budget, double amountSpent, double hoursRemaining, string projectStatus)
         {
+            this.projectName = projectName;
+            this.budget = budget;
+            this.amountSpent = amountSpent;
+            this.hoursRemaining = hoursRemaining;
+            this.projectStatus = projectStatus;
         }
 
         //Getters and Setters for each private data member go below.

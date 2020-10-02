@@ -25,6 +25,7 @@ namespace ASasitharan_NETD3200_Lab1
             InitializeComponent();
         }
 
+        static List<Project> projectList = new List<Project>();
         private void btnCreateProject_Click(object sender, RoutedEventArgs e)
         {
             string ProjectName;
@@ -47,11 +48,16 @@ namespace ASasitharan_NETD3200_Lab1
                                 {
                                     if(EstHoursRemaining >=0)
                                     {
-                                        
-                                    }
-                                    else if(EstHoursRemaining==0)
-                                    {
-                                        cmbStatus.SelectedIndex = 5;
+                                        if(EstHoursRemaining == 0)
+                                        {
+                                            cmbStatus.SelectedIndex = 5;
+                                        }
+                                        projectList.Add(new Project(txtProjectName.Text, Budget, Spent, EstHoursRemaining, cmbStatus.Text));
+                                        lbProjectDisplay.Items.Clear();
+                                        for(int i=0; i<projectList.Count; i++)
+                                        {
+                                            lbProjectDisplay.Items.Add(projectList[i].ProjectName);
+                                        }
                                     }
                                     else
                                     {
