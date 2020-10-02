@@ -14,13 +14,13 @@
       </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Margin="50">
-            <Label x:Name="lblProjectName" Content="Project Name:"/>
+            <Label x:Name="lblProjectName" Content="Project Name:" Target="{Binding ElementName=txtProjectName}"/>
             <TextBox x:Name="txtProjectName"/>
-            <Label x:Name="lblBudget" Content="Budget:"/>
+            <Label x:Name="lblBudget" Content="Budget:" Target="{Binding ElementName=txtBudget}"/>
             <TextBox x:Name="txtBudget"/>
-            <Label x:Name="lblSpent" Content="Spent:"/>
+            <Label x:Name="lblSpent" Content="Spent:" Target="{Binding ElementName=txtSpent}"/>
             <TextBox x:Name="txtSpent"/>
-            <Label x:Name="lblEstHoursRemaining" Content="Est Hours Remaining:"/>
+            <Label x:Name="lblEstHoursRemaining" Content="Est Hours Remaining:" Target="{Binding ElementName=txtEstHoursRemaining}"/>
             <TextBox x:Name="txtEstHoursRemaining"/>
             <Label x:Name="lblStatus" Content="Status:"/>
             <!-- Status Combo box.-->
@@ -32,7 +32,7 @@
                 <ComboBoxItem>Deployment</ComboBoxItem>
                 <ComboBoxItem>Completed</ComboBoxItem>
             </ComboBox>
-            <Button x:Name="btnCreateProject" Content="Create Project" Margin="50,50,50,54"/>
+            <Button x:Name="btnCreateProject" Content="Create Project" Margin="50,50,50,54" Click="btnCreateProject_Click"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="50">
             <ListBox x:Name="lbProjectDisplay"></ListBox>
