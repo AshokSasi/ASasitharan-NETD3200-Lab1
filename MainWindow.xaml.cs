@@ -25,14 +25,20 @@ namespace ASasitharan_NETD3200_Lab1
             InitializeComponent();
         }
 
+        private void lbProjectDisplay_MouseDoubleClick(object sender, RoutedEventArgs e)
+        {
+            ProjectView secondWindow = new ProjectView();
+            secondWindow.Show();
+        }
+       
         static List<Project> projectList = new List<Project>();
         private void btnCreateProject_Click(object sender, RoutedEventArgs e)
         {
-            string ProjectName;
+          
             double Budget;
             double Spent;
             double EstHoursRemaining;
-            string Status;
+            
 
             if(txtProjectName.Text!=string.Empty)
             {
