@@ -23,13 +23,21 @@
             <Label x:Name="lblEstHoursRemaining" Content="Est Hours Remaining:"/>
             <TextBox x:Name="txtEstHoursRemaining"/>
             <Label x:Name="lblStatus" Content="Status:"/>
+            <!-- Status Combo box.-->
             <ComboBox x:Name="cmbStatus">
                 <ComboBoxItem IsSelected="True">Requirements</ComboBoxItem>
-              <ComboBoxItem>Design</ComboBoxItem>
-              <ComboBoxItem>Design</ComboBoxItem>
-
-
+                <ComboBoxItem>Design</ComboBoxItem>
+                <ComboBoxItem>Implementation</ComboBoxItem>
+                <ComboBoxItem>Testing</ComboBoxItem>
+                <ComboBoxItem>Deployment</ComboBoxItem>
+                <ComboBoxItem>Completed</ComboBoxItem>
             </ComboBox>
+            <Button x:Name="btnCreateProject" Content="Create Project" Margin="50,50,50,54"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="50">
+            <ListBox x:Name="lbProjectDisplay"></ListBox>
+
+
         </StackPanel>
     </Grid>
 </Window>
