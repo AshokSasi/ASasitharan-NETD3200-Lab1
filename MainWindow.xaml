@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASasitharan_NETD3200_Lab1"
         mc:Ignorable="d"
-        Title="CODE IT INC." Height="450" Width="800">
+        Title="CODE IT INC." Height="500" Width="800">
     <Grid>
-      <Grid.ColumnDefinitions>
+      <!-- Create two columns -->
+        <Grid.ColumnDefinitions>
         <ColumnDefinition />
         <ColumnDefinition />
-
       </Grid.ColumnDefinitions>
 
+        <!-- StackPanel that contains all of the user input -->
         <StackPanel Grid.Column="0" Margin="50">
             <Label x:Name="lblProjectName" Content="Project Name:" Target="{Binding ElementName=txtProjectName}"/>
             <TextBox x:Name="txtProjectName"/>
@@ -25,6 +26,7 @@
             <Label x:Name="lblStatus" Content="Status:"/>
             <!-- Status Combo box.-->
             <ComboBox x:Name="cmbStatus">
+              <!-- Set requirements to be default selected -->
                 <ComboBoxItem IsSelected="True">Requirements</ComboBoxItem>
                 <ComboBoxItem>Design</ComboBoxItem>
                 <ComboBoxItem>Implementation</ComboBoxItem>
@@ -34,9 +36,11 @@
             </ComboBox>
             <Button x:Name="btnCreateProject" Content="Create Project" Margin="50,50,50,54" Click="btnCreateProject_Click"/>
         </StackPanel>
+      <!-- StackPanel that contains the listBox -->
         <StackPanel Grid.Column="1" Margin="50">
-            <ListBox x:Name="lbProjectDisplay">
-              <ListBox.ItemContainerStyle>
+            <ListBox x:Name="lbProjectDisplay" Margin="50,50,50,50">
+              <!-- Create a double click event handler for the list box -->
+                <ListBox.ItemContainerStyle>
                 <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource {x:Type ListBoxItem}}">
                   <EventSetter Event="MouseDoubleClick" Handler="lbProjectDisplay_MouseDoubleClick"/>
                 </Style>

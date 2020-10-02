@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASasitharan_NETD3200_Lab1"
         mc:Ignorable="d"
-        Title="ProjectView" Height="450" Width="800">
+        Title="CODE IT Project View" Height="500" Width="600">
     <Grid>
-        
+      <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+        </Grid.RowDefinitions>
+      <!-- Stack panel that shows inputs -->
+        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.RowSpan="3">
+        <Label x:Name="lblProjectName2" Content="Project Name:"></Label>
+            <TextBox x:Name="txtProjectName2" IsEnabled="False"></TextBox>
+            <Label x:Name="lblBudget2" Content="Budget:"></Label>
+          <TextBox x:Name="txtBudget2" IsEnabled="False"></TextBox>
+        <Label x:Name="lblSpent2" Content="Spent:"></Label>
+        <TextBox x:Name="txtSpent2" IsEnabled="False"></TextBox>
+            <Label x:Name="lblHoursRemaining2" Content="Est Hours Remaining:"></Label>
+        <TextBox x:Name="txtHoursRemaining" IsEnabled="False"></TextBox>
+            <Label x:Name="lblStatus2" Content="Status:"></Label>
+        <ComboBox x:Name="cmbStatus2" IsEnabled="False">
+          <!-- Set requirements to be default selected -->
+          <ComboBoxItem IsSelected="True">Requirements</ComboBoxItem>
+          <ComboBoxItem>Design</ComboBoxItem>
+          <ComboBoxItem>Implementation</ComboBoxItem>
+          <ComboBoxItem>Testing</ComboBoxItem>
+          <ComboBoxItem>Deployment</ComboBoxItem>
+          <ComboBoxItem>Completed</ComboBoxItem>
+        </ComboBox>
+        </StackPanel>
+      <!-- Stack panel for buttons -->
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <Button x:Name="btnClose" Content="Close" Click="btnClose_Click" Width="300"></Button>
+        </StackPanel>
     </Grid>
+    
 </Window>

@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Name: Ashok Sasitharan
+ * Student Id: 100745484
+ */
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
@@ -7,15 +11,15 @@ namespace ASasitharan_NETD3200_Lab1
 {
    public class Project
     {
-        //First private data member
+        //private data members
         private string projectName;
         private double budget;
         private double amountSpent;
         private double hoursRemaining;
-        private string projectStatus;
-        //Complete the rest (there are four more mentioned in the description).
-        //constructor, you need to complete it this is a no parameter constructor shown below.
-        public Project(string projectName, double budget, double amountSpent, double hoursRemaining, string projectStatus)
+        private int projectStatus;
+        
+        //constructor
+        public Project(string projectName, double budget, double amountSpent, double hoursRemaining, int projectStatus)
         {
             this.projectName = projectName;
             this.budget = budget;
@@ -24,33 +28,35 @@ namespace ASasitharan_NETD3200_Lab1
             this.projectStatus = projectStatus;
         }
 
-        //Getters and Setters for each private data member go below.
-        /*This one is an example, notice that the data member is called private string “projectName” the getter/setter property is named “ProjectName”(different capitalization).*/
+        //getter and setter for ProjectName
         public string ProjectName
         {
             get { return this.projectName; }
             set { this.projectName = value; }
         }
-
+        
+        //getter and setter for Budget
         public double Budget
         {
             get { return this.budget; }
             set { this.budget = value; }
         }
 
+        //getter and setter for AmountSpent
         public double AmountSpent
         {
             get { return this.amountSpent; }
             set { this.amountSpent = value; }
         }
 
+        //getter and setter for Hours Remaining
         public double HoursRemaining
         {
             get { return this.hoursRemaining; }
             set { this.hoursRemaining = value; }
         }
-
-        public string ProjectStatus
+        //getter and setter for ProjectStatus
+        public int ProjectStatus
         {
             get { return this.projectStatus; }
             set { this.projectStatus = value; }
